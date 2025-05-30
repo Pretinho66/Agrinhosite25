@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Governança Local - Agrinho</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5fff6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    .tab {
+      overflow: hidden;
+      background-color: #e0f2e9;
+      border-bottom: 2px solid #2e8b57;
+    }
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .tab button:hover {
+      background-color: #ccc;
+    }
+    .tab button.active {
+      background-color: #2e8b57;
+      color: white;
+    }
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    .tabcontent img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2e8b57;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Programa Agrinho</h1>
+  <p>Governança Local e a Conexão entre Campo e Cidade</p>
+</header>
+
+<main>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Introducao')" id="defaultOpen">Introdução</button>
+    <button class="tablinks" onclick="openTab(event, 'Importancia')">Importância</button>
+    <button class="tablinks" onclick="openTab(event, 'Exemplos')">Exemplos</button>
+    <button class="tablinks" onclick="openTab(event, 'Conexao')">Conexão Campo-Cidade</button>
+    <button class="tablinks" onclick="openTab(event, 'Links')">Links de Pesquisa</button>
+  </div>
+
+  <div id="Introducao" class="tabcontent">
+    <h3>Introdução</h3>
+    <img src="img/int.jpeg" alt="imagem introdução" width="300">
+    <p>A governança local é uma ferramenta fundamental para o fortalecimento das comunidades, pois permite que os próprios moradores participem ativamente das decisões que afetam suas vidas.</p>
+  </div>
+
+  <div id="Importancia" class="tabcontent">
+    <h3>Importância</h3>
+<img src="img/impo.jpeg" alt="imagem importância" width="250">
+    <p>A importância da governança local está em sua capacidade de aproximar o cidadão do poder público, promovendo o diálogo direto e eficiente.</p>
+  </div>
+
+  <div id="Exemplos" class="tabcontent">
+    <h3>Exemplos</h3>
+<img src="img/exe.jpeg" alt="imagem exemplo" width="200">
+    <p>Existem muitos exemplos práticos de como a governança local funciona na prática. Conselhos municipais de saúde, educação e meio ambiente.</p>
+  </div>
+
+  <div id="Conexao" class="tabcontent">
+    <h3>Conexão Campo-Cidade</h3>
+    <img src="img/Con.jpeg" alt="imagem conexão" width="300">
+    <p>Uma das funções mais importantes da governança local é estabelecer uma ponte entre o campo e a cidade. Isso significa garantir que as comunidades rurais tenham voz.</p>
+    <iframe width="325" height="250" src="https://www.youtube.com/embed/n8RcQM5MIr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+  
+  <div id="Links" class="tabcontent">
+  <h3>Links de Pesquisa</h3>
+  <ul>
+    <li><a href="https:                                                   
+    <li><a href="https://www.ibge.gov.br/" target="_blank">IBGE</a></li>
+    <li><a href="https://www.mda.gov.br/" target="_blank">Ministério do Desenvolvimento Agrário e Agricultura Familiar</a></li>
+    <!-- Adicione mais links aqui -->
+  </ul>
+</div>
+
+</main>
+
+<footer>
+  &copy; 2025 - Site Educativo sobre o Agrinho
+</footer>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
